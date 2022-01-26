@@ -1,0 +1,26 @@
+@model List<meuyoutube.Models.Video>
+
+@foreach (var item in @Model)
+{   
+    <div class="row tm-catalog-item-list">
+        <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+            <div class="position-relative tm-thumbnail-container">
+                <img src="../img/tn-01.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                <a href="#" onclick="abrirVideo(@item.Id);" class="position-absolute tm-img-overlay">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-play-fill tm-overlay-icon" viewBox="0 0 16 16">
+                        <path
+                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">@item.Titulo</h3>
+                <p class="tm-catalog-item-text">@item.Descricao</p>
+            </div>
+        </div>
+    </div>
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="/js/video.js"></script>

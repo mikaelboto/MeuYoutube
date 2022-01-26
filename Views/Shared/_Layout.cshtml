@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>meuyoutube</title>
+    <partial name="_Css"></partial>
+</head>
+<body>
+    <div class="tm-page-wrap mx-auto">
+        <header>
+            <partial name="_Nav">
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        <partial name="_Subscribe"></partial>
+        <partial name="_Footer"></partial>
+        <partial name="_JS"></partial>
+        @await RenderSectionAsync("Scripts", required: false)
+        </div>
+</body>
+</html>
